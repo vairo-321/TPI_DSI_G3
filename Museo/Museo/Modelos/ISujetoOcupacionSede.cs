@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Museo.Modelos
 {
-    class ISujetoOcupacionSede
+    public interface ISujetoOcupacionSede
     {
+
+        void desuscribir(IObservadorOcupacionSede obj);
+
+        void notificar();
+
+        void suscribir(IObservadorOcupacionSede obj);
+
     }
 }

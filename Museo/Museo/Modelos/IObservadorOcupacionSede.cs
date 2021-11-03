@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Museo.Modelos
 {
-    class IObservadorOcupacionSede
+    public interface IObservadorOcupacionSede
     {
+        void actualizarCanVisitantes(DateTime t, int cantVisitantes, int capSede);
+        
     }
 }

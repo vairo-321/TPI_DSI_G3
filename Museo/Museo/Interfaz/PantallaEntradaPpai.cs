@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Museo.Modelos;
 
 namespace Museo.Interfaz
 {
-    public partial class PantallaEntradaPpai : Form
+    public partial class PantallaEntradaPpai : Form, IObservadorOcupacionSede
     {
         public PantallaEntradaPpai()
         {
             InitializeComponent();
+        }
+
+        public void actualizarCanVisitantes(DateTime t, int cantVisitantes, int capSede)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -9,8 +9,18 @@ using System.Threading.Tasks;
 
 namespace Museo.Controladores
 {
-    public class GestorRegistroVentaEntrada
+    public class GestorRegistroVentaEntrada : ISujetoOcupacionSede
     {
+        //atributo observadores incluido en patron Observer
+
+        IObservadorOcupacionSede[] observadores;
+
+        //--------------------------------------------------
+
+        int cantEntrada;
+
+        //----------------------------------------
+
         HelperDB helper = new HelperDB();
         Sede sede = new Sede();
         Entrada[] entrada;
@@ -21,6 +31,7 @@ namespace Museo.Controladores
         int numSedeAct;
         int cantEnSede;
         int cantMaxVisitantes;
+
 
         public void inicioSesio()
         {
@@ -33,6 +44,8 @@ namespace Museo.Controladores
         {
             numSedeAct = sesionActual.conocerUsuario();
         }
+
+
         public void opcionRegistrarEntrada()
         {
             inicioSesio();
@@ -69,6 +82,8 @@ namespace Museo.Controladores
                 sede.tarifa[i].tipoVisita.nombre = tb.Rows[i]["TipoVisita"].ToString();
             }
         }
+
+
         public DateTime getFechaActual()
         {
             return DateTime.Now;
@@ -149,6 +164,7 @@ namespace Museo.Controladores
 
         public void tomarConfirmacionVenta(int cantEntradas, int monto, int idTarifa, string tipoEntrada, string tipoVisita, int montoAd, DateTime fechaIni, DateTime fechaFin)
         {
+            cantEntrada = cantEntradas;
             registrarEntradas(cantEntradas, monto, idTarifa);
             int numeroEntrada = helper.ObtenerUltimo() - (cantEntradas - 1);
             entrada = new Entrada[cantEntradas];
@@ -201,10 +217,20 @@ namespace Museo.Controladores
 
         public void actualizarCantidadVisitantes(int cantEntradas)
         {
-            PantallaEntrada pantalla = new PantallaEntrada();
-            pantalla.actualizarPantalla(cantEnSede + cantEntradas, cantMaxVisitantes);
-            pantalla.Show();
+
+            IObservadorOcupacionSede[] pantallas = { new PantallaEntradaPpai(), new PantallaSala(), new PantallaSala() };
+
+            foreach(IObservadorOcupacionSede obj in pantallas )
+            {
+                suscribir(obj);
+            }
+            //pantalla.actualizarPantalla(cantEnSede + cantEntradas, cantMaxVisitantes);
+            //pantalla.Show();
+            notificar();
         }
+
+
+
 
         public void buscarExposiciones(string condicion)
         {
@@ -303,6 +329,44 @@ namespace Museo.Controladores
                 entrada[j].sede = new Sede();
                 entrada[j].sede.numero = Convert.ToInt32(tb2.Rows[j]["idSede"].ToString());
             }
+        }
+
+
+
+
+
+        public void desuscribir(IObservadorOcupacionSede obj)
+        {
+            if (observadores.Contains(obj))
+            {
+                int j = 0;
+                IObservadorOcupacionSede[] observadores2 = new IObservadorOcupacionSede[observadores.Length - 1];
+                for(int i = 0; i < observadores.Length; i++)
+                {
+                    if(observadores[i].Equals(obj))
+                    {
+                        continue;
+                    }
+
+                    observadores2[j] = observadores[i];
+
+                    j++;
+                    
+                }
+            }
+        }
+
+        public void notificar()
+        {
+            foreach(IObservadorOcupacionSede obs in observadores)
+            {
+                obs.actualizarCanVisitantes(getFechaActual(), cantEnSede + cantEntrada, cantMaxVisitantes);
+            }
+        }
+
+        public void suscribir(IObservadorOcupacionSede obj)
+        {
+            observadores.Append(obj);
         }
     }
 }

@@ -66,10 +66,24 @@
     <Compile Include="Interfaz\PantallaEntrada.Designer.cs">
       <DependentUpon>PantallaEntrada.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\PantallaEntradaPpai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\PantallaEntradaPpai.Designer.cs">
+      <DependentUpon>PantallaEntradaPpai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\PantallaSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaz\PantallaSala.Designer.cs">
+      <DependentUpon>PantallaSala.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modelos\DetalleExposicion.cs" />
     <Compile Include="Modelos\Empleado.cs" />
     <Compile Include="Modelos\Entrada.cs" />
     <Compile Include="Modelos\Exposicion.cs" />
+    <Compile Include="Modelos\IObservadorOcupacionSede.cs" />
+    <Compile Include="Modelos\ISujetoOcupacionSede.cs" />
     <Compile Include="Modelos\Obra.cs" />
     <Compile Include="Modelos\ReservaVisita.cs" />
     <Compile Include="Modelos\Sede.cs" />

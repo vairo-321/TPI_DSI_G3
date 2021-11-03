@@ -10,3 +10,15 @@ D:\Documents\Tomy\Universidad\DSI\21\SistemaPPAI\Museo\Museo\obj\Debug\Museo.exe
 D:\Documents\Tomy\Universidad\DSI\21\SistemaPPAI\Museo\Museo\obj\Debug\Museo.pdb
 D:\Documents\Tomy\Universidad\DSI\21\SistemaPPAI\Museo\Museo\obj\Debug\Museo.Interfaz.Impresora.resources
 D:\Documents\Tomy\Universidad\DSI\21\SistemaPPAI\Museo\Museo\obj\Debug\Museo.Interfaz.PantallaEntrada.resources
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\bin\Debug\Museo.exe.config
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\bin\Debug\Museo.exe
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\bin\Debug\Museo.pdb
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.csproj.AssemblyReference.cache
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.Interfaz.Impresora.resources
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.PantallaPrincipal.resources
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.Interfaz.PantallaEntrada.resources
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.Properties.Resources.resources
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.csproj.GenerateResource.cache
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.csproj.CoreCompileInputs.cache
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.exe
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.pdb
