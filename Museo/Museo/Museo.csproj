@@ -103,6 +103,12 @@
     <EmbeddedResource Include="Interfaz\PantallaEntrada.resx">
       <DependentUpon>PantallaEntrada.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\PantallaEntradaPpai.resx">
+      <DependentUpon>PantallaEntradaPpai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaz\PantallaSala.resx">
+      <DependentUpon>PantallaSala.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

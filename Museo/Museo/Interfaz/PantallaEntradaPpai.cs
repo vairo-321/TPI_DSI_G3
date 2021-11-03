@@ -20,7 +20,18 @@ namespace Museo.Interfaz
 
         public void actualizarCanVisitantes(DateTime t, int cantVisitantes, int capSede)
         {
-            throw new NotImplementedException();
+            lbl_CapacAct.Text = cantVisitantes.ToString();
+            lbl_capacMax.Text = capSede.ToString();
+            lbl_fechaHora.Text = t.ToString();
+            lbl_Porc.Text = calcularPorcentaje(cantVisitantes, capSede).ToString();
+            this.Show();
+        }
+
+        private double calcularPorcentaje(int adentro, int capacidad)
+        {
+            double primero = Convert.ToDouble(adentro);
+            double segundo = Convert.ToDouble(capacidad);
+            return (primero / segundo ) * 100;
         }
     }
 }

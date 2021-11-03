@@ -22,3 +22,5 @@ C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.csproj.GenerateReso
 C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.csproj.CoreCompileInputs.cache
 C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.exe
 C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.pdb
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.Interfaz.PantallaEntradaPpai.resources
+C:\Users\diaze\Escritorio\PPAI-3\Museo\Museo\obj\Debug\Museo.Interfaz.PantallaSala.resources
